@@ -21,9 +21,11 @@ int main(){
 
     //USing ternary operator
 
-        grade = avg >= 90 ? 'A' : avg >= 80 ? 'B' : avg >= 70 ? 'C' : avg >= 60 ? 'D' : 'F';
+       if(total <300){
+         grade = avg >= 90 ? 'A' : avg >= 80 ? 'B' : avg >= 70 ? 'C' : avg >= 60 ? 'D' : 'F';
 
-        cout << "Your garde is " << grade;    
+        cout << "Your garde is " << grade;
+       }    
 
     //Applying switch case
 
@@ -38,6 +40,7 @@ int main(){
         break;
         default : cout << ".You have failed the examination" ;
     }
+    
     // Eligiblity criteria 
 
     if((grade == 'A') || (grade == 'B') || (grade == 'C') || (grade == 'D')){
@@ -46,15 +49,4 @@ int main(){
     else{
         cout << "Plese try again next time" ;
     }
-  				 
-    
-
-
-
-
-
-
-
-    
-
 }
