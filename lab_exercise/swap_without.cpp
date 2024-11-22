@@ -7,8 +7,8 @@ int main(){
       cout << "Enter b:" << endl;
     cin >> b;
     a=a+b;
-    b=a+b;
-    a=b-a;
+    b=a-b;
+    a=a-b;
     cout << a;
     cout << b;
     return 0;
