@@ -7,10 +7,7 @@ int main(){
     cin >> start;
     cout << "Enter end year :" << endl;
     cin >> end;
-    // a=2 b=3
-    // a=a+b; 5
-    // b=a+b; 8
-    // a=b-a; 3
+    
     
 
 }
