@@ -10,9 +10,11 @@ int main(){
 	int i,j;
 	for(i=5;i>=1;i--){
 		for(j=i;j<=5;j++){
-		    cout << j << endl;	
+		    cout << j ;	
+			 cout << "  ";
 		}
-		cout << "  ";
+		
+		cout << endl;
 	
 	}
     return 0;
