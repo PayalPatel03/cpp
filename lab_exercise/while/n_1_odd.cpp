@@ -3,18 +3,18 @@
 using namespace std;
 
 int main() {
-    int N;
+    int n;
 
     cout << "Enter the value of N: ";
-    cin >> N;
+    cin >> n;
 
 
-    while (N >= 1) {
+    while (n >= 1) {
         
-        if (N % 2 != 0) {
-            cout << N << "  "; 
+        if (n % 2 != 0) {
+            cout << n << "  "; 
         }
-        N--; 
+        n--; 
     }
 
     return 0;
