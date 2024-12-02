@@ -10,21 +10,34 @@ using namespace std;
 //             cout << i<< "   ";
 //         }
 //     }
-//     return 0;
+//     return 0; 
+// }
+
+// int main(){
+//     int n;
+//     cout << "Enter any number";
+//     cin >> n;
+//     do{
+//         if(n%2==0){
+//             cout << n << " ";
+//         }
+//         n--;    
+//     }
+//     while(n>=1);
+
+
+
 // }
 
 int main(){
-    int n;
-    cout << "Enter any number";
+    int n,i=2;
+    cout << "Enter any numver";
     cin >> n;
-    do{
-        if(n%2==0){
-            cout << n << " ";
-        }
-        n--;    
-    }
-    while(n>=1);
-
-
-
+    do
+    {
+        if(i%2==0){
+            cout << i << " ";
+        }i++;
+    } while (i<=n);
+    
 }
