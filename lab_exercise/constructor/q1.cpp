@@ -1,7 +1,5 @@
 #include<iostream>
 using namespace std;
-
-
 class City
 {
     public:
@@ -23,6 +21,10 @@ class City
         obj.id=7;
         this-> id =obj.id;
     }
+    //Destructor
+     ~City(){
+        cout<<"Object is destroyed...."<<endl;
+    }
 };
 
 int main(){
@@ -35,9 +37,6 @@ int main(){
 
     cout << c4.id << endl;
     cout << c2.id << endl;
-
-
-
 
     return 0;
 }
