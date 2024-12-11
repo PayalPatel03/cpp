@@ -24,7 +24,6 @@ class Pak :public India{
 int main(){
     Pak aman;
     aman.wearing();
-
-
+    
     return 0;
 }

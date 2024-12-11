@@ -11,8 +11,6 @@ class Vehicle{
      void truck(int a,int g){
         cout << "Truck is running with " << a << "passengers and " << g << " goods" << endl;
     }
-
-
 };
 
 int main(){
@@ -20,7 +18,6 @@ int main(){
     obj.truck();
     obj.truck(10);
     obj.truck(5,20);
-
-
+    
     return 0;
 }
