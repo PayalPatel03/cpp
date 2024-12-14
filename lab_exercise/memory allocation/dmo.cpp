@@ -10,10 +10,10 @@ class Myclass{
         this->size =size;
         arr=new int(this->size);
         if (arr==NULL){
-            cout << "Memory allocation is failed!!!" << endl;
+            cout << "Memory allocation is failed!!!..." << endl;
         }
         else{
-            cout << "Memory allocation is successfull!!!" << endl;
+            cout << "Memory allocation is successfull!!!..." << endl;
         }
     }
 
