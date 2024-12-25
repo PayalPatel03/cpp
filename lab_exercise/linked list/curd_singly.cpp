@@ -69,6 +69,10 @@ class LinkedList{
         }
         cout << endl;
     }
+
+    void update(int element,int position){
+            
+    }
 };
 int main(){
     LinkedList list;
@@ -79,7 +83,8 @@ int main(){
         cout << "Press 1 for inserting node at begnning of the list" << endl;
         cout << "Press 2 for inserting node at end of the list" << endl;
         cout << "Press 3 for inserting node at any position of the list" << endl;
-        cout << "Press 4 for viewing  all node of the list" << endl;
+        cout << "Press 4 for updating node" << endl;
+        cout << "Press 9 for viewing  all node of the list" << endl;
         cout << "Press 0 for exit" << endl;
 
         cout << "Enter Your choice:" << endl;
@@ -110,7 +115,20 @@ int main(){
             break;
 
             case 4:
+            cout << "Enter element: " << endl;
+            cin >> element;
+            cout << "Enter position : " << endl;
+            cin >> position;
+            list.update(element,position);
+            cout << "Element update successfully..." << endl;
+
+
+            case 9:
             list.viewAllNodes();
+            break;
+
+            default:
+            cout<<"Enter valid choice....."<<endl<<endl;
             break;
         }
 
