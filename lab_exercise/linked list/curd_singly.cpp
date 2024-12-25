@@ -42,7 +42,32 @@ class LinkedList{
             ptr->next=newNode;      //1111
         }
         this->count++;
+    }
 
+    void addAtPosition(int data,int position){
+        Node *newNode=new Node(data);
+        if(position==0){
+            newNode->next=this->head;
+            this->head=newNode;
+        }
+        else{
+            Node *ptr=head;
+            for(int i=0;i<position-1;i++){
+                ptr=ptr->next;
+            }
+            newNode->next=ptr->next;
+            ptr->next=newNode;
+        }
+        this->count++;
+    }
+    void viewAllNodes(){
+        Node *ptr=this->head;
+        while(ptr!=NULL){
+            ptr=ptr->next;
+            cout << ptr->data << "  ";
+            ptr=ptr->next;
+        }
+        cout << endl;
     }
 };
 int main(){
@@ -73,11 +98,20 @@ int main(){
             cin >> element;
              list.addAtEnd(element);
             cout << "Element inserted at End successfully..." << endl;
+            break;
 
             case 3:
             cout << "Enter element: " << endl;
             cin >> element;
+            cout << "Enter position : " << endl;
+            cin >> position;
+            list.addAtPosition(element,position);
+            cout << "Node inserted successfully..." << endl;
+            break;
 
+            case 4:
+            list.viewAllNodes();
+            break;
         }
 
     } while (choice!=0);
