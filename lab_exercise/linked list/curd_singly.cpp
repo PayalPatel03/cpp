@@ -71,7 +71,7 @@ class LinkedList{
     }
 
     void update(int element,int position){
-            
+
     }
 };
 int main(){
