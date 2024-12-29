@@ -20,6 +20,7 @@ class LinkedList{
     LinkedList(){
         this->head=NULL;
         count=0;
+        
     }
     
     void addAtBeginning(int data){
