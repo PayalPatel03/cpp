@@ -17,6 +17,8 @@ class Stack{
         this->capacity=capacity;
         arr=new int[capacity];
         this->top=-1;
+
+        // hg
     }
 
     // PUSHING (ADD AN ELEMENT AT TOP OF STACK)
