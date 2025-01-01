@@ -86,19 +86,17 @@ class Stack{
     }
 };
 
-
-
 int main(){
     int num;
     cout<<"Enter your number : ";
     cin>>num;
 
-    Stack a(MAX);
+    Stack p(MAX);
 
     while(num!=0){
-        a.push(num%2);
+        p.push(num%2);
         num=num/2;
     }
 
-    a.display();
+    p.display();
 }
