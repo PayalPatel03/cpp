@@ -91,12 +91,12 @@ int main(){
     cout<<"Enter your number : ";
     cin>>num;
 
-    Stack p(MAX);
+    Stack pr(MAX);
 
     while(num!=0){
-        p.push(num%2);
+        pr.push(num%2);
         num=num/2;
     }
 
-    p.display();
+    pr.display();
 }
