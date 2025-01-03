@@ -1,7 +1,8 @@
 #include<iostream>
 using namespace std;
 
-class Queue{
+class Queue
+{
     int* arr;
     int front;
     int rear;
@@ -9,7 +10,8 @@ class Queue{
     int capacity;
 
     public:
-    Queue(int capacity){
+    Queue(int capacity)
+    {
         arr=new int[capacity];
         front=-1;
         rear=-1;
@@ -17,97 +19,124 @@ class Queue{
         this->capacity=capacity;
     }
 
-    void enqueue(int element){
-        if(rear==capacity-1){
+    void enqueue(int element)
+    {
+        if(rear==capacity-1)
+        {
             cout<<"Queue overflow..."<<endl;
         }
-        else if(front==-1 && rear==-1){
+        else if(front==-1 && rear==-1)
+        {
             front=rear=0;
             arr[rear]=element;
             count++;
         }
-        else{
+        else
+        {
             rear++;
             arr[rear]=element;
             count++;
         }
     }
 
-    void dequeue(){
-        if(front==-1 && rear==-1){
+    void dequeue()
+    {
+        if(front==-1 && rear==-1)
+        {
             cout<<"Queue underflow.."<<endl;
         }
-        else if (front==rear){
+        else if (front==rear)
+        {
             front=rear=-1;
             count--;
         }
-        else{
+        else
+        {
             front++;
             count--;
         }
     }
 
-    void getfront(){
-        if(front==-1){
+    void getfront()
+    {
+        if(front==-1)
+        {
             cout<<"Queue is empty.."<<endl;
         }
-        else{
+        else
+        {
             cout<<arr[front];
         }
         cout<<endl;
     }
 
-    void getrear(){
-        if(rear==-1){
+    void getrear()
+    {
+        if(rear==-1)
+        {
             cout<<"Queue is empty.."<<endl;
         }
-        else{
+        else
+        {
             cout<<arr[rear];
         }
         cout<<endl;
     }
 
-    void display(){
-        if(front==-1 && rear==-1){
+    void display()
+    {
+        if(front==-1 && rear==-1)
+        {
             cout<<"Queue is empty.."<<endl;
         }
-        else{
-            for(int i=front;i<=rear;i++){
+        else
+        {
+            for(int i=front;i<=rear;i++)
+            {
                 cout<<arr[i]<<" ";
             }
         }
         cout<<endl;
     }
 
-    void isEmpty(){
-        if(front==-1 && rear==-1){
+    void isEmpty()
+    {
+        if(front==-1 && rear==-1)
+        {
             cout<<"Queue is empty.."<<endl;
         }
-        else{
+        else
+        {
             cout<<"Queue is not empty.."<<endl;
         }
     }
 
-    void isFull(){
-        if(rear==capacity-1){
+    void isFull()
+    {
+        if(rear==capacity-1)
+        {
             cout<<"Queue is full.."<<endl;
         }
-        else{
+        else
+        {
             cout<<"Queue is not full.."<<endl;
         }
     }
 
-    void size(){
+    void size()
+    {
         cout<<"Size of queue : "<< count << endl;
     }
 };
 
 
-int main(){
+int main()
+{
     Queue queue(5);
     int choice;
 
-    do{
+    do
+    {
         cout<<"Press 1 for enqueue operation"<<endl;
         cout<<"Press 2 for dequeue operation"<<endl;
         cout<<"Press 3 for front operation"<<endl;
@@ -121,7 +150,8 @@ int main(){
         cout<<"Enter your choice : ";
         cin>>choice;
 
-        switch(choice){
+        switch(choice)
+        {
             case 1:
             int ele;
             cout<<"Enter your element : ";
