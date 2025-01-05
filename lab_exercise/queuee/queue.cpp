@@ -16,6 +16,8 @@ class Queue
         front=-1;
         rear=-1;
         count=0;
+
+        
         this->capacity=capacity;
 
 
@@ -23,7 +25,7 @@ class Queue
 
     void enqueue(int element)
     {
-        
+
         if(rear==capacity-1)
         {
             cout<<"Queue overflow..."<<endl;
