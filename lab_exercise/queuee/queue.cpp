@@ -17,10 +17,13 @@ class Queue
         rear=-1;
         count=0;
         this->capacity=capacity;
+
+
     }
 
     void enqueue(int element)
     {
+        
         if(rear==capacity-1)
         {
             cout<<"Queue overflow..."<<endl;
