@@ -15,12 +15,8 @@ class Queue
         arr=new int[capacity];
         front=-1;
         rear=-1;
-        count=0;
-
-        
+        count=0; 
         this->capacity=capacity;
-
-
     }
 
     void enqueue(int element)
