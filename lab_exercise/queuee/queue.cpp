@@ -16,7 +16,9 @@ class Queue
         front=-1;
         rear=-1;
         count=0; 
-        this->capacity=capacity;
+        this->capacity=capacity; 
+
+
     }
 
     void enqueue(int element)
