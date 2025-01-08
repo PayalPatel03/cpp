@@ -17,8 +17,6 @@ class Queue
         rear=-1;
         count=0; 
         this->capacity=capacity; 
-
-
     }
 
     void enqueue(int element)
