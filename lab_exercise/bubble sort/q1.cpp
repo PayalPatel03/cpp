@@ -39,10 +39,10 @@ int main()
         cin>>a[i];
     }
 
-    cout<<"Array element are : ";
+    cout<<"Array elements are : ";
     print_arr(a,n);
     cout<<endl;
-    
+
     cout<<"Sorted array: ";
     bubble_sort(a,n);
     print_arr(a,n);
