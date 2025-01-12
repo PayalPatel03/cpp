@@ -1,80 +1,90 @@
-#include <iostream>
-#include <vector>
-
+#include<iostream>
+#include<vector>
 using namespace std;
 
-void merge(vector<int>& arr, int left, int mid, int right) {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
+void merge(vector<int>&a,int low,int mid,int high)
+{
+    vector<int>temp;
+    int left=low;
+    int right=mid+1;
 
-    vector<int> L(n1);
-    vector<int> R(n2);
-
-    for (int i = 0; i < n1; i++)
-        L[i] = arr[left + i];
-    for (int j = 0; j < n2; j++)
-        R[j] = arr[mid + 1 + j];
-
-    int i = 0; 
-    int j = 0; 
-    int k = left; 
-
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
-            i++;
-        } else {
-            arr[k] = R[j];
-            j++;
+    while(left<=mid && right<=high)
+    {
+        if(a[left]<=a[right])
+        {
+            temp.push_back(a[left]);
+            left++;
         }
-        k++;
+        else
+        {
+            temp.push_back(a[right]);
+            right++;
+        }
     }
 
-  
-    while (i < n1) {
-        arr[k] = L[i];
-        i++;
-        k++;
+    while(left<=mid)
+    {
+        temp.push_back(a[left]);
+        left++;
     }
 
-
-    while (j < n2) {
-        arr[k] = R[j];
-        j++;
-        k++;
+    while(right<=high)
+    {
+        temp.push_back(a[right]);
+        right++;
     }
+
+    for(int i=low;i<=high;i++)
+    {
+        a[i]=temp[i-low];
+    }
+
 }
 
-void mergeSort(vector<int>& arr, int left, int right) {
-    if (left < right) {
-        
-        int mid = left + (right - left) / 2;
-
-        
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-
-        merge(arr, left, mid, right);
+void mergesort(vector<int>&a,int low,int high)
+{
+    if(low>=high)
+    {
+        return;
     }
+
+    int mid=(low+high)/2;
+
+    mergesort(a,low,mid);
+
+    mergesort(a,mid+1,high);
+
+    merge(a,low,mid,high);
+
 }
 
-int main() {
-    vector<int> arr = {38, 27, 43, 3, 9, 82, 10};
-    int arr_size = arr.size();
-
-    cout << "Given array is: \n";
-    for (int i : arr) {
-        cout << i << " ";
+void print(vector<int>&a,int n)
+{
+    for(int i=0;i<a.size();i++)
+    {
+        cout<<a[i]<<" ";
     }
-    cout << endl;
+    cout<<endl;
+}
 
-    mergeSort(arr, 0, arr_size - 1);
+int main()
+{
+    int n;
+    cout<<"Enter array size : ";
+    cin>>n;
 
-    cout << "\nSorted array is: \n";
-    for (int i : arr) {
-        cout << i << " ";
+    vector <int> a;
+    for(int i=0;i<n;i++)
+    {
+        int element;
+        cout<<"a["<<i<<"] = ";
+        cin>>element;
+        a.push_back(element);
     }
-    cout << endl;
 
-    return 0;
+    cout<<"Array is : ";
+    print(a,n);
+    mergesort(a,0,n-1);
+    cout<<"Sorted array is : ";
+    print(a,n);
 }
