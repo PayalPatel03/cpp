@@ -85,6 +85,7 @@ int main()
     cout<<"Array is : ";
     print(a,n);
     mergesort(a,0,n-1);
+    
     cout<<"Sorted array is : ";
     print(a,n);
 }
