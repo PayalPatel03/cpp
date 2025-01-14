@@ -70,6 +70,7 @@ void print(vector<int>&a,int n)
 int main()
 {
     int n;
+    
     cout<<"Enter array size : ";
     cin>>n;
 
@@ -85,7 +86,7 @@ int main()
     cout<<"Array is : ";
     print(a,n);
     mergesort(a,0,n-1);
-    
+
     cout<<"Sorted array is : ";
     print(a,n);
 }
