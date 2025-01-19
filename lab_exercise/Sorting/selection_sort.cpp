@@ -41,5 +41,5 @@ int main(){
     a.selectionsort(ar,n);
     a.print(ar,n);
 
-
+    
 }
