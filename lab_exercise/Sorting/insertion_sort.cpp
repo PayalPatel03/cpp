@@ -17,6 +17,7 @@ void insertion_sort(int a[],int n)
     }
 }
 
+
 void print_arr(int a[],int n)
 {
     for(int i=0;i<n;i++)
