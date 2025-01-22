@@ -26,6 +26,7 @@ void print_arr(int a[],int n)
     }
 }
 
+
 int main()
 {
     int n;
