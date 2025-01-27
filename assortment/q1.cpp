@@ -14,6 +14,7 @@ int main() {
         cin >> arr[i];
     }
     
+    
 
     cout << "Negative elements of the array are:";
     for (int i = 0; i < len; i++) {
